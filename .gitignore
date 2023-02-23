@@ -1,5 +1,7 @@
 .ipynb_checkpoints
 datasets
 .DS_Store
+07.ipynb
+*.joblib
 
 
