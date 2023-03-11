@@ -1,20 +1,50 @@
-import json
-from pprint import pprint
 import pandas as pd
 
 import joblib
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+model = joblib.load('model/loan_pipe.pkl')
 
 
-def main():
-    model = joblib.load('model/loan_pipe.pkl')
+class Form(BaseModel):
+    Loan_ID: str
+    Gender: str
+    Married: str
+    Dependents: str
+    Education: str
+    Self_Employed: str
+    ApplicantIncome: float
+    CoapplicantIncome: float
+    LoanAmount: float
+    Loan_Amount_Term: float
+    Credit_History: int
+    Property_Area: str
 
-    with open('model/data/form_LP001014.json') as fin:
-        form = json.load(fin)
-        df = pd.DataFrame.from_dict([form])
-        y = model['model'].predict(df)
-        print(f'{form["Loan_ID"]}: {y[0]}')
-    # pprint(model['metadata'])
+
+class Prediction(BaseModel):
+    Loan_ID: str
+    Result: float
 
 
-if __name__ == '__main__':
-    main()
+@app.get('/status')
+def status():
+    return "Im OK"
+
+
+@app.get('/version')
+def version():
+    return model['metadata']
+
+
+@app.post('/predict', response_model=Prediction)
+def predict(form: Form):
+    df = pd.DataFrame.from_dict([form.dict()])
+    y = model['model'].predict(df)
+
+    return {
+        'Loan_ID': form.Loan_ID,
+        'Result': y[0]
+    }
+
