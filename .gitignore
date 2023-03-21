@@ -3,7 +3,9 @@ datasets
 .DS_Store
 07.ipynb
 *.joblib
+*.h5
 
+models/*.model
 
 math/08.ipynb
 *.csv
