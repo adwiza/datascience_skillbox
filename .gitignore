@@ -4,8 +4,7 @@ datasets
 07.ipynb
 *.joblib
 *.h5
-
-models/*.model
-
+models/*.*
 math/08.ipynb
 *.csv
+
