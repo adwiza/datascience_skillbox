@@ -7,4 +7,5 @@ datasets
 models/*.*
 math/08.ipynb
 *.csv
+*.jpg
 
