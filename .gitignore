@@ -5,6 +5,7 @@ datasets
 *.joblib
 *.h5
 models/*.*
+logs/
 math/08.ipynb
 *.csv
 *.jpg
