@@ -4,8 +4,10 @@ datasets
 07.ipynb
 *.joblib
 *.h5
+Brewfile
 models/**
 logs/
+outputs/
 math/08.ipynb
 *.csv
 *.jpg
