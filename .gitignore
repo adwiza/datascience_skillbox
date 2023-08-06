@@ -13,3 +13,5 @@ math/08.ipynb
 *.jpg
 *.png
 *.gif
+biteam/
+saved_model/
