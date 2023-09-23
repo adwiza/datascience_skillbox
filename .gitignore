@@ -4,6 +4,8 @@ datasets
 07.ipynb
 *.joblib
 *.h5
+*.hdf5
+*.keras
 Brewfile
 models/**
 logs/
