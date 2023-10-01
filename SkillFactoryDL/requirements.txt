@@ -58,6 +58,7 @@ Deprecated==1.2.14
 dm-tree==0.1.8
 docker==6.1.3
 docopt==0.6.2
+efficientnet==1.1.1
 elastic-transport==8.4.0
 elasticsearch==8.7.0
 entrypoints @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_croot-jb01gaox/entrypoints_1650293758411/work
@@ -135,6 +136,7 @@ jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_16014907206
 jupyterlab-widgets @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_65wwn9cwab/croot/jupyterlab_widgets_1679055283460/work
 jupyterlab_server @ file:///private/var/folders/nz/j6p8yfhx1mv_0grj5xl4650h0000gp/T/abs_0fmfqwbrd7/croot/jupyterlab_server_1680792517631/work
 keras==2.13.1
+Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
 kibana-api==0.0.4
 kiwisolver==1.4.4
